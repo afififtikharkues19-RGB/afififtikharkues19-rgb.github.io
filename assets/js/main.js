@@ -18,6 +18,44 @@ if (navToggle && nav) {
 const portrait = document.querySelector('.portrait-frame img');
 if (portrait) portrait.src = 'assets/images/profile/afif-iftikhar.webp';
 
+const experienceItems = document.querySelectorAll('#experience .timeline-item');
+if (experienceItems[0]) {
+  const time = experienceItems[0].querySelector('.time');
+  if (time) time.textContent = 'Jan 2024–Present';
+}
+if (experienceItems[1]) {
+  const role = experienceItems[1].querySelector('.role-type');
+  if (role) role.textContent = 'Research Assistant · Geospatial Research';
+}
+if (experienceItems[2]) {
+  const role = experienceItems[2].querySelector('.role-type');
+  const title = experienceItems[2].querySelector('h3');
+  if (role) role.textContent = 'Research Assistant · Urban Displacement Research';
+  if (title) title.textContent = 'Urban Displacement Study, Satkhira & Bagerhat';
+}
+if (experienceItems[3]) {
+  const time = experienceItems[3].querySelector('.time');
+  if (time) time.textContent = 'Feb 2024–Present';
+}
+
+const methodCards = document.querySelectorAll('.methods-section .method-card');
+if (methodCards[0]) {
+  const text = methodCards[0].querySelector('p');
+  if (text) text.textContent = 'Multi-temporal Landsat analysis, MNDWI, adaptive thresholding, LULC classification, change detection, channel-geometry reconstruction, riverbank migration, erosion–accretion, spatial overlays, accuracy assessment, ArcGIS 10.8.';
+}
+if (methodCards[1]) {
+  const text = methodCards[1].querySelector('p');
+  if (text) text.textContent = 'Hierarchical Bayesian modeling, Monte Carlo uncertainty analysis, multiple linear regression, binary logistic regression, VIF, chi-square, Cramér\'s V, LVI/LVI-IPCC, sensitivity analysis.';
+}
+
+const lookingAhead = document.querySelector('.looking-ahead');
+if (lookingAhead) {
+  const heading = lookingAhead.querySelector('h2');
+  const detail = lookingAhead.querySelector('p:last-child');
+  if (heading) heading.textContent = 'I am interested in graduate research that deepens my work on river morphodynamics, channel migration, and coastal environmental change through remote sensing, GIS, and quantitative modeling.';
+  if (detail) detail.textContent = 'My next research direction is to strengthen computational approaches for geomorphic sensitivity and landscape transformation while integrating satellite observations with field evidence where appropriate.';
+}
+
 function addPublicationFigure(journalName, imageSrc, altText, caption) {
   const journal = [...document.querySelectorAll('.journal')]
     .find(el => el.textContent.trim() === journalName);
