@@ -56,12 +56,6 @@ if (lookingAhead) {
   if (detail) detail.textContent = 'My next research direction is to strengthen computational approaches for geomorphic sensitivity and landscape transformation while integrating satellite observations with field evidence where appropriate.';
 }
 
-document.querySelectorAll('a[href="assets/documents/Afif_Iftikhar_CV.pdf"]').forEach(a => {
-  a.href = 'cv.html';
-  a.target = '_self';
-  if (a.textContent.includes('Download')) a.textContent = 'View CV';
-});
-
 function addPublicationFigure(journalName, imageSrc, altText, caption) {
   const journal = [...document.querySelectorAll('.journal')]
     .find(el => el.textContent.trim() === journalName);
