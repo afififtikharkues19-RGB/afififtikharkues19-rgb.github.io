@@ -48,6 +48,14 @@ if (methodCards[1]) {
   if (text) text.textContent = 'Hierarchical Bayesian modeling, Monte Carlo uncertainty analysis, multiple linear regression, binary logistic regression, VIF, chi-square, Cramér\'s V, LVI/LVI-IPCC, sensitivity analysis.';
 }
 
+const lookingAhead = document.querySelector('.looking-ahead');
+if (lookingAhead) {
+  const heading = lookingAhead.querySelector('h2');
+  const detail = lookingAhead.querySelector('p:last-child');
+  if (heading) heading.textContent = 'I am interested in graduate research that deepens my work on river morphodynamics, channel migration, and coastal environmental change through remote sensing, GIS, and quantitative modeling.';
+  if (detail) detail.textContent = 'My next research direction is to strengthen computational approaches for geomorphic sensitivity and landscape transformation while integrating satellite observations with field evidence where appropriate.';
+}
+
 document.querySelectorAll('a[href="assets/documents/Afif_Iftikhar_CV.pdf"]').forEach(a => {
   a.href = 'cv.html';
   a.target = '_self';
