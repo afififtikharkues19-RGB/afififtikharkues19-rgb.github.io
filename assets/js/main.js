@@ -38,6 +38,16 @@ if (experienceItems[3]) {
   if (time) time.textContent = 'Feb 2024–Present';
 }
 
+const methodCards = document.querySelectorAll('.methods-section .method-card');
+if (methodCards[0]) {
+  const text = methodCards[0].querySelector('p');
+  if (text) text.textContent = 'Multi-temporal Landsat analysis, MNDWI, adaptive thresholding, LULC classification, change detection, channel-geometry reconstruction, riverbank migration, erosion–accretion, spatial overlays, accuracy assessment, ArcGIS 10.8.';
+}
+if (methodCards[1]) {
+  const text = methodCards[1].querySelector('p');
+  if (text) text.textContent = 'Hierarchical Bayesian modeling, Monte Carlo uncertainty analysis, multiple linear regression, binary logistic regression, VIF, chi-square, Cramér\'s V, LVI/LVI-IPCC, sensitivity analysis.';
+}
+
 document.querySelectorAll('a[href="assets/documents/Afif_Iftikhar_CV.pdf"]').forEach(a => {
   a.href = 'cv.html';
   a.target = '_self';
