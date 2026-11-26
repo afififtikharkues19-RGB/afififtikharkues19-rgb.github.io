@@ -17,3 +17,5 @@ apply(root.getAttribute('data-theme'),false);
 button && button.addEventListener('click',function(){apply(root.getAttribute('data-theme')==='dark'?'light':'dark',true)});
 window.addEventListener('storage',function(e){if(e.key===key && (e.newValue==='dark'||e.newValue==='light'))apply(e.newValue,false)});
 })();
+/* Shared portfolio analytics bootstrap; analytics.js is disabled until configured. */
+(function(){if(window.__portfolioAnalyticsLoading)return;var current=document.currentScript;if(!current||!current.src)return;window.__portfolioAnalyticsLoading=true;var script=document.createElement('script');script.src=new URL('analytics.js',current.src).href;script.async=true;document.head.appendChild(script)})();
